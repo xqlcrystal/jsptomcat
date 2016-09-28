@@ -66,9 +66,23 @@
 	</servlet>
 	
 	<servlet>
+	<servlet-name>ExceptionTest</servlet-name>
+	<servlet-class>mypack.ExceptionTestServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
 	<servlet-name>Counter</servlet-name>
 	<servlet-class>mypack.CounterServlet</servlet-class>
 	</servlet>
+	
+	<servlet>
+	<servlet-name>ExpiresTest</servlet-name>
+	<servlet-class>mypack.ExpiresTestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>ExpiresTest</servlet-name>
+	<url-pattern>/ExpiresTest</url-pattern>
+	</servlet-mapping>
 	
 	<servlet-mapping>
 	<servlet-name>Counter</servlet-name>
@@ -88,6 +102,41 @@
 	<servlet-mapping>
 	<servlet-name>ContextTest</servlet-name>
 	<url-pattern>/ContextTest</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	<servlet-name>ExceptionTest</servlet-name>
+	<url-pattern>/excep</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	<servlet-name>DownloadServlet</servlet-name>
+	<servlet-class>mypack.DownloadServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>DownloadServlet</servlet-name>
+	<url-pattern>/Download</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>upload</servlet-name>
+	<servlet-class>mypack.UploadServlet</servlet-class>
+	<init-param>
+	<param-name>filepath</param-name>
+	<param-value>store</param-value>
+	</init-param>
+	
+	<init-param>
+	<param-name>tempFilePath</param-name>
+	<param-value>temp</param-value>
+	</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>upload</servlet-name>
+	<url-pattern>/upload</url-pattern>
 	</servlet-mapping>
 
 	<jsp-config>

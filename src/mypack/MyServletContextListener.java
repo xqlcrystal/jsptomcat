@@ -15,7 +15,31 @@ public class MyServletContextListener implements ServletContextListener {
 
 	@Override
 	public void contextDestroyed(ServletContextEvent sce) {
+		
+		
+		ServletContext context = sce.getServletContext();
 
+		Counter counter = (Counter) context.getAttribute("counter");
+
+		if (counter != null) {
+
+			try {
+				String filepath = context.getRealPath("/count");
+				filepath += "/count.txt";
+				PrintWriter writer = new PrintWriter(filepath);
+				writer.println(counter.getCount());
+				writer.close();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		
+	}
+
+	@Override
+	public void contextInitialized(ServletContextEvent sce) {
 		ServletContext context = sce.getServletContext();
 
 		try {
@@ -34,26 +58,5 @@ public class MyServletContextListener implements ServletContextListener {
 			e.printStackTrace();
 		}
 
-	}
-
-	@Override
-	public void contextInitialized(ServletContextEvent sce) {
-		ServletContext context = sce.getServletContext();
-
-		Counter counter = (Counter) context.getAttribute("counter");
-
-		if (counter != null) {
-
-			try {
-				String filepath = context.getRealPath("/count");
-				filepath += "/count.txt";
-				PrintWriter writer = new PrintWriter(filepath);
-				writer.println(counter.getCount());
-				writer.close();
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
 	}
 }
