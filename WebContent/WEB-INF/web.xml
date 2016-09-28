@@ -7,13 +7,89 @@
 	<welcome-file-list>
 		<welcome-file>login.htm</welcome-file>
 	</welcome-file-list>
+	
+	
+	<context-param>
+	<param-name>emailofwebmaster</param-name>
+	<param-value>test@163.com</param-value>
+	</context-param>
+	
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>mypack.DispatcherServlet</servlet-class>
 	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/dispatcher</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>Font</servlet-name>
+		<servlet-class>mypack.FontServlet</servlet-class>
+		<init-param>
+			<param-name>color</param-name>
+			<param-value>blue</param-value>
+		</init-param>
+		<init-param>
+			<param-name>size</param-name>
+			<param-value>15</param-value>
+		</init-param>
+	</servlet>
 	
 	<servlet-mapping>
-	<servlet-name>dispatcher</servlet-name>
-	<url-pattern>/dispatcher</url-pattern>
+	<servlet-name>Font</servlet-name>
+	<url-pattern>/font</url-pattern>
 	</servlet-mapping>
+	
+	
+	<servlet>
+	<servlet-name>ContextTest</servlet-name>
+	<servlet-class>mypack.ContextTestServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+	<servlet-name>LifeInit</servlet-name>
+	<servlet-class>mypack.LifeServlet</servlet-class>
+	<load-on-startup>2</load-on-startup>
+	</servlet>
+	
+	<servlet>
+	<servlet-name>Life</servlet-name>
+	<servlet-class>mypack.LifeServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+	<servlet-name>Counter</servlet-name>
+	<servlet-class>mypack.CounterServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>Counter</servlet-name>
+	<url-pattern>/Counter</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet-mapping>
+	<servlet-name>Life</servlet-name>
+	<url-pattern>/life</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	<servlet-name>LifeInit</servlet-name>
+	<url-pattern>/LifeInit</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	<servlet-name>ContextTest</servlet-name>
+	<url-pattern>/ContextTest</url-pattern>
+	</servlet-mapping>
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>/mytaglib</taglib-uri>
+			<taglib-location>/WEB-INF/mytaglib.tld</taglib-location>
+		</taglib>
+	</jsp-config>
 </web-app>
