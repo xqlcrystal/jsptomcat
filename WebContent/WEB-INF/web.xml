@@ -14,6 +14,10 @@
 	<param-value>test@163.com</param-value>
 	</context-param>
 	
+	<listener>
+	<listener-class>mypack.MyServletContextListener</listener-class>
+	</listener>
+	
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>mypack.DispatcherServlet</servlet-class>
