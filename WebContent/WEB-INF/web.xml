@@ -138,6 +138,16 @@
 	<servlet-name>upload</servlet-name>
 	<url-pattern>/upload</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>Cookie</servlet-name>
+	<servlet-class>mypack.CookieServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>Cookie</servlet-name>
+	<url-pattern>/Cookie</url-pattern>
+	</servlet-mapping>
 
 	<jsp-config>
 		<taglib>
