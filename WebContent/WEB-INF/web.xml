@@ -148,6 +148,79 @@
 	<servlet-name>Cookie</servlet-name>
 	<url-pattern>/Cookie</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>DirTester</servlet-name>
+	<servlet-class>mypack.DirTestServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>DirTester</servlet-name>
+	<url-pattern>/DirTester</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>Check</servlet-name>
+	<servlet-class>mypack.CheckServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>Check</servlet-name>
+	<url-pattern>/Check</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	<servlet-name>output</servlet-name>
+	<servlet-class>mypack.OutServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>output</servlet-name>
+	<url-pattern>/output</url-pattern>
+	</servlet-mapping>
+
+<servlet>
+<servlet-name>Greet</servlet-name>
+<servlet-class>mypack.GreetServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>Greet</servlet-name>
+<url-pattern>/greet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>Main</servlet-name>
+<servlet-class>mypack.MainServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>Main</servlet-name>
+<url-pattern>/main</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>Hello1</servlet-name>
+<servlet-class>mypack.HelloServlet1</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>Hello1</servlet-name>
+<url-pattern>/hello1</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>Hello3</servlet-name>
+<servlet-class>mypack.HelloServlet3</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>Hello3</servlet-name>
+<url-pattern>/hello3</url-pattern>
+</servlet-mapping>
 
 	<jsp-config>
 		<taglib>
