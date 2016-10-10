@@ -11,7 +11,10 @@
 This is the source.jsp before forward
 </p>
 
-<jsp:forward page="target.jsp"/>
+<jsp:forward page="/dir1/dir2/target.jsp">
+<jsp:param value="tom" name="username"/>
+<jsp:param value="1234" name="password"/>
+</jsp:forward>
 <p>
 This is the source.jsp after forward
 </p>
